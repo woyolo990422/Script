@@ -1,0 +1,5 @@
+num=1
+for file in $(ls  *.vasp); do
+   mv "$file" "POSCAR_$(printf "%u" $num).vasp"
+   let num=$num+1
+done
